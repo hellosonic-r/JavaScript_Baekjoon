@@ -8,8 +8,10 @@ const alphabetArr = Array(26).fill(0);
 for (let i = 0; i < upperStr.length; i += 1) {
   alphabetArr[upperStr[i].codePointAt() - 65] += 1;
 }
+
 let maxCount = 0;
 let answer;
+
 for (let i = 0; i < alphabetArr.length; i += 1) {
   if (alphabetArr[i] !== 0 && alphabetArr[i] > maxCount) {
     maxCount = alphabetArr[i];
